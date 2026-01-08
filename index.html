@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Moldova Job Market</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+		<!-- Tailwind CSS + DaisyUI via CDN -->
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css">
+		<script src="https://cdn.tailwindcss.com"></script>
+
+		<!-- Mithril.js via CDN -->
+		<script src="https://unpkg.com/mithril/mithril.js"></script>
+
+		<!-- Chart.js for visualizations -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+		<!-- Chart.js Box Plot Plugin -->
+		<script src="https://cdn.jsdelivr.net/npm/@sgratzl/chartjs-chart-boxplot@4.2.5/build/index.umd.min.js"></script>
+
+		<!-- SQL.js for client-side SQLite -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+
+		<style>
+			/* Ensure charts are responsive */
+			.chart-container {
+				position: relative;
+				height: 300px;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app"></div>
+
+		<!-- Load modular JavaScript files in order -->
+		<!-- Core configuration and utilities -->
+		<script src="js/config.js"></script>
+		<script src="js/database.js"></script>
+		<script src="js/api.js"></script>
+		<script src="js/dbApi.js"></script>
+		<script src="js/state.js"></script>
+		<script src="js/utils.js"></script>
+
+		<!-- Components -->
+		<script src="js/components/Header.js"></script>
+		<script src="js/components/Footer.js"></script>
+		<script src="js/components/Loading.js"></script>
+		<script src="js/components/JobListItem.js"></script>
+		<script src="js/components/FilterPanel.js"></script>
+
+		<!-- Pages -->
+		<script src="js/pages/HomePage.js"></script>
+		<script src="js/pages/JobsPage.js"></script>
+		<script src="js/pages/JobDetailPage.js"></script>
+		<script src="js/pages/AnalysisDetailPage.js"></script>
+
+		<!-- Analysis -->
+		<script src="js/analysis/ChartHelpers.js"></script>
+		<script src="js/analysis/CustomAnalysisState.js"></script>
+		<script src="js/analysis/PredefinedAnalyses.js"></script>
+		<script src="js/analysis/AnalysisPage.js"></script>
+		
+		<!-- Filtered Analysis -->
+		<script src="js/analysis/FilteredAnalysisState.js"></script>
+		<script src="js/analysis/FilteredAnalyses.js"></script>
+		<script src="js/analysis/FilteredAnalysisFilterPanel.js"></script>
+		<script src="js/analysis/FilteredAnalysisPage.js"></script>
+
+		<!-- Main application entry point -->
+		<script src="js/main.js"></script>
+	</body>
+</html>
